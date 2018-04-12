@@ -1,0 +1,130 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	padding: 1rem;
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+.container {
+	max-width: 720px;
+	margin: 0 auto;
+}
+
+.header {
+	border-bottom: 4px solid black;
+	padding-bottom: .5rem;
+	margin-bottom: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.to-do-creator {
+	font-size: 1.2rem;
+	padding: 1rem;
+	width: 100%;
+	border: 1px solid black;
+	border-radius: 4px;
+	outline: none;
+}
+
+::placeholder {
+    color: #D0D0D0;
+    opacity: 1; 
+}
+
+.todo-list {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+/* Necessary wrapper layer: animation div can't have border*/
+.todo {
+	position: relative;
+	list-style: none;
+	border-bottom: 1px solid black;
+}
+
+.todo-content {
+	padding: 1rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.todo-form {
+	width: 100%;
+	padding-right: 1rem;
+}
+
+.todo-value {
+	border: none;
+	font-size: 1.2rem;
+	outline: none;
+	width: 100%;
+	margin-right: 1rem;
+	font-weight: bold;
+}
+
+.is-done:after {
+	position: absolute;
+	content: '';
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255,0.75);
+	pointer-events: none;
+}
+
+.is-done .todo-value {
+	text-decoration: line-through;
+}
+
+.options {
+	display: flex;
+}
+
+.options > *:not(:last-of-type) {
+	margin-right: 1rem;
+}
+
+.icon {
+	width: 1.1rem;
+	height: 1.1rem;
+	cursor: pointer;
+}
+
+.slide {
+	padding: 1rem;
+}
+
+.slide-enter {
+  opacity: 0.01;
+  max-height: 0;
+  overflow: hidden;
+}
+.slide-enter-active {
+  opacity: 1;
+  max-height: 56px;
+  overflow: hidden;
+  transition: all 300ms ease-out;
+}
+.slide-exit {
+  opacity: 1;
+  max-height: 56px;
+  overflow: hidden;
+}
+.slide-exit-active {
+  opacity: 0.01;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 300ms ease-out;
+}
