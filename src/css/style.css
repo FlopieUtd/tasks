@@ -43,7 +43,7 @@ h1 {
 
 .todo-list {
 	display: flex;
-	flex-direction: column-reverse;
+	flex-direction: column;
 }
 
 /* Necessary wrapper layer: animation div can't have border*/
@@ -126,5 +126,20 @@ h1 {
   opacity: 0.01;
   max-height: 0;
   overflow: hidden;
+  transition: all 300ms ease-out;
+}
+
+.fade-enter {
+  opacity: 0.01;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: all 300ms ease-out;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0.01;
   transition: all 300ms ease-out;
 }
